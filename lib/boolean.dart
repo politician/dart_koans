@@ -9,14 +9,14 @@ void using_boolean() {
          * Booleans accept only true or false values.
          */
         bool boolean = true;
-        expect(_____, isTrue);
+        expect(boolean, isTrue);
       });
       test('var', () {
         /*
          * We can also use var and allow the vm to correctly
          * infer the type for us.
          */
-        var boolean = _____;
+        var boolean = false;
         expect(boolean, isBool);
       });
     });
@@ -34,8 +34,8 @@ void using_boolean() {
          * true, is false. See the language specification
          * for details: http://goo.gl/gBUIZ )
          */
-        var boolean = 0;
-        expect(_____, isNotBool);
+        var zero = 0;
+        expect(zero, isNotBool);
       });
       test('1 not true', () {
         /*
@@ -43,8 +43,8 @@ void using_boolean() {
          * is considered to be 'true'. However this is 
          * also not the case in Dart.
          */
-        var boolean = 1;
-        expect(_____, isNotBool);
+        var one = 1;
+        expect(one, isNotBool);
       });
       test('negated', () {
         /*
@@ -54,7 +54,7 @@ void using_boolean() {
          */
         var boolean = true;
         boolean = !boolean;
-        expect(boolean, equals(_____));
+        expect(boolean, equals(false));
       });
     });
   });
