@@ -73,7 +73,7 @@ start_here() {
          * were not declared.
          */
         var number = 5;
-        expect(_____, isInt);
+        expect(number, isInt);
       });
       test('not decimal', () {
         /*
