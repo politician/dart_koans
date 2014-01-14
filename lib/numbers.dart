@@ -80,7 +80,7 @@ start_here() {
          * Note that decimal numbers are not Integers (int)
          */
         var number = 5.3;
-        expect(_____, isNotInt);
+        expect(number, isNotInt);
       });
       test('arbitrary size', () {
         /*
