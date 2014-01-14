@@ -157,7 +157,7 @@ two
          * index of 0.
          */
         var str = 'My little string';
-        expect(str[1], equals(_____));
+        expect(str[1], equals('y'));
       });
       test('immutable', () {
         /*
@@ -179,7 +179,7 @@ two
         // concerned that anything after the => below causes the
         // error to be thrown.
         var broken = () => str[0] = 'h'; 
-        expect(_____, throwsNoSuchMethodError);
+        expect(broken, throwsNoSuchMethodError);
       });
     });
   });
