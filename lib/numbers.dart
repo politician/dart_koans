@@ -56,7 +56,7 @@ start_here() {
          * whole numbers.
          */
         int number = 5;
-        expect(_____, isInt);
+        expect(number, isInt);
       });
       test('num', () {
         /*
