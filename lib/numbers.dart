@@ -20,7 +20,7 @@ start_here() {
        * to run the program, it should tell you what you need to
        * do to make the test pass.
        */
-      expect(_____, isTrue);
+      expect(true, isTrue);
     });
   });
   group('Numbers -', () {
