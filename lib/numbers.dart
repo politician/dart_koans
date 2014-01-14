@@ -30,7 +30,7 @@ start_here() {
        * The num type holds numbers including whole numbers.
        */
       num number = 5;
-      expect(_____, isNum);
+      expect(number, isNum);
     });
     test('num - decimal numbers', () {
       /*
