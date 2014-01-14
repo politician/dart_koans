@@ -14,7 +14,7 @@ void using_strings() {
          * Fill in what str should equal below.
          */
         String str = 'This is a string.';
-        expect(_____, equals('This is a string.'));
+        expect(str, equals('This is a string.'));
       });
       test('double quotes', () {
         /*
@@ -23,7 +23,7 @@ void using_strings() {
          * apostrophe in a sentence.
          */
         String str = "Wasn't that easy?";
-        expect(str, equals(_____));
+        expect(str, equals("Wasn't that easy?"));
       });
       test('escape sequences', () {
         /*
@@ -37,7 +37,7 @@ void using_strings() {
          *  \t for a tab space.
          */
         String str = 'Single \'quoted\' or double\n';
-        expect(str, equals("_____\n"));
+        expect(str, equals("Single \'quoted\' or double\n"));
       });
       test('triple quotes', () {
         /*
@@ -53,7 +53,7 @@ void using_strings() {
          */
         var str = '''
 One and
-_____
+two
 ''';
         expect(str, equals('One and\ntwo\n'));
       });
@@ -66,7 +66,7 @@ _____
          * Fill in _____ with the escaped version of str.
          */
         var str = r'\n is a new line\n';
-        expect(str, equals('_____'));
+        expect(str, equals(r'\n is a new line\n'));
       });
     });
     group('Concatenation -', () {
@@ -83,7 +83,7 @@ _____
          */
         var str = 'One '
             'and two.';
-        expect(_____, equals('One and two.'));
+        expect(str, equals('One and two.'));
       });
       test('"+" concatenation', () {
         /*
@@ -92,7 +92,7 @@ _____
          */
         var str = 'One and ';
         var str2 = 'two.';
-        expect(str + str2, equals(_____));
+        expect(str + str2, equals('One and two.'));
       });
       test('"+" only with strings', () {
         /*
@@ -106,7 +106,7 @@ _____
          * non-string added together throws an error.
          */
         var broken = () => 'two ' + 3;
-        expect(_____, throwsArgumentError);
+        expect(broken, throwsArgumentError);
       });
     });
     group('Interpolation -', () {
