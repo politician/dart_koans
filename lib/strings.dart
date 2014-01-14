@@ -120,7 +120,7 @@ two
          */
         var action = 'be nice';
         var str = 'Please $action to me';
-        expect(str, equals('Please _____ to me'));
+        expect(str, equals('Please be nice to me'));
       });
       test('toString', () {
         /* 
@@ -131,7 +131,7 @@ two
          * look at Objects.
          */
         int number = 101;
-        expect('$number dalmatians', equals(_____));
+        expect('$number dalmatians', equals('101 dalmatians'));
       });
       test('complex', () {
         /*
@@ -144,7 +144,7 @@ two
         var one = 1;
         var two = 2;
         var str = '$one plus $two equals ${one + two}';
-        expect(str, equals('1 plus 2 equals _____'));
+        expect(str, equals('1 plus 2 equals 3'));
       });
     });
     group('Accessing -', () {
