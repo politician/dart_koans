@@ -100,14 +100,14 @@ start_here() {
          * point number. 
          */
         double number = 5.3;
-        expect(_____, isDouble);
+        expect(number, isDouble);
       });
       test('num', () {
         /*
          * Just like integers, doubles are a subclass of num.
          */
         double number = 5.3;
-        expect(_____, isNum);
+        expect(number, isNum);
       });
       test('var', () {
         /*
