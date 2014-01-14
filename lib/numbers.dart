@@ -37,7 +37,7 @@ start_here() {
        * The num type can also hold decimal numbers
        */
       num number = 5.3;
-      expect(_____, isNum);
+      expect(number, isNum);
     });
     test('var', () {
       /*
