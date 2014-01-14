@@ -130,8 +130,8 @@ start_here() {
          * Integers do not.
          */
         var number = 1.423e12;
-        expect(_____, isDouble);
-        expect(_____, isNotInt);
+        expect(number, isDouble);
+        expect(number, isNotInt);
       });
     });
     test('which type', () {
@@ -144,7 +144,7 @@ start_here() {
        * or 'var'.
        */
       var number = 5.0;
-      expect(number, _____);
+      expect(number, isDouble);
     });
   });
 }
