@@ -65,7 +65,7 @@ start_here() {
          * int is a num.
          */
         int number = 5;
-        expect(_____, isNum);
+        expect(number, isNum);
       });
       test('var', () {
         /*
