@@ -12,7 +12,7 @@ void using_lists() {
          * Fill in the literal that list should equal below.
          */
         List list = [3, 2, 5];
-        expect(list, equals(_____));
+        expect(list, equals([3, 2, 5]));
       });
       test('Multiple Types', () {
         /*
@@ -20,7 +20,7 @@ void using_lists() {
          * can contain multiple different types.
          */
         var list = [3, 2, 4.5, 0.03, 'string', ['sublist', true], false];
-        expect(_____, isList);
+        expect(list, isList);
       });
       test('Constructor', () {
         /*
@@ -30,7 +30,7 @@ void using_lists() {
          * list.
          */
         var list = new List();
-        expect(_____, isList);
+        expect(list, isList);
       });
       test('Using Generics', () {
         /*
@@ -42,7 +42,7 @@ void using_lists() {
          * or errors when unexpected types appear.
          */
         var list = new List<int>();
-        expect(_____, isList);
+        expect(list, isList);
       });
       test('Fixed-Size', () {
         /*
@@ -54,7 +54,7 @@ void using_lists() {
          * list using Generics.
          */
         var list = new List(10);
-        expect(_____, isList);
+        expect(list, isList);
       });
     });
     group('Accessing -', () {
@@ -65,7 +65,7 @@ void using_lists() {
          * list. The first element of a list is index 0.
          */
         var list = ['zero', true, 2, 3.5];
-        expect(list[1], equals(_____));
+        expect(list[1], equals(true));
       });
       test('[]=', () {
         /*
@@ -74,7 +74,7 @@ void using_lists() {
          */
         var list = ['one', 'two', 'five'];
         list[2] = 'three sir!';
-        expect(list, equals(['one', 'two', '_____']));
+        expect(list, equals(['one', 'two', 'three sir!']));
       });
       test('Sub-lists', () {
         /*
@@ -84,7 +84,7 @@ void using_lists() {
          * in equals. (Don't forget indices start at 0).
          */
         var list = ['one', ['two', 2], ['three', 3.3, 3]];
-        expect(_____, equals(3.3));
+        expect(list[2][1], equals(3.3));
       });
     });
     group('Methods -', () {
@@ -96,7 +96,7 @@ void using_lists() {
            * a list. We want to know the List.length
            */
           var list = [3, 2, true];
-          expect(list.length, equals(_____));
+          expect(list.length, equals(3));
         });
         test('empty list', () {
           /*
@@ -105,14 +105,14 @@ void using_lists() {
            * list with generics.
            */
           var list = new List<int>();
-          expect(list.length, equals(_____));
+          expect(list.length, equals(0));
         });
         test('fixed size', () {
           /*
            * So what about when we have an immutable list?
            */
           var list = new List(10);
-          expect(list.length, equals(_____));
+          expect(list.length, equals(10));
         });
         test('setting growing', () {
           /*
@@ -124,7 +124,7 @@ void using_lists() {
            */
           var list = [0, 1, 2];
           list.length = 5;
-          expect(list, equals(_____));
+          expect(list, equals([0, 1, 2, null, null]));
         });
         test('setting shrinking', () {
           /*
@@ -134,7 +134,7 @@ void using_lists() {
            */
           var list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
           list.length = 3;
-          expect(list, equals(_____));
+          expect(list, equals([0, 1, 2]));
         });
         test('setting fixed size', () {
           /*
@@ -146,7 +146,7 @@ void using_lists() {
           var list = new List(5);
           // Need below to properly wrap the exception.
           var broken = () => list.length = 10;
-          expect(_____, throwsUnsupportedError);
+          expect(broken, throwsUnsupportedError);
         });
       });
       group('add -', () {
@@ -159,7 +159,7 @@ void using_lists() {
            */
           var list = [0, 1, 2];
           list.add(3);
-          expect(list, equals([_____]));
+          expect(list, equals([0, 1, 2, 3]));
         });
         test('adding lists', () {
           /* Now the add method is designed for adding one
@@ -168,7 +168,7 @@ void using_lists() {
            */
           var list = [0, 1, 2];
           list.add([3, 4]);
-          expect(list, equals([_____]));
+          expect(list, equals([0, 1, 2, [3, 4]]));
         });
         test('addAll', () {
           /*
@@ -178,7 +178,7 @@ void using_lists() {
            */
           var list = [0, 1, 2];
           list.addAll([3, 4]);
-          expect(list, equals([_____]));
+          expect(list, equals([0, 1, 2, 3, 4]));
         });
         test('add to fixed size', () {
           /*
@@ -188,7 +188,7 @@ void using_lists() {
            */
           var list = new List(5);
           var broken = () => list.add(10);
-          expect(_____, throwsUnsupportedError);
+          expect(broken, throwsUnsupportedError);
         });
       });
     }); // end of methods group.
