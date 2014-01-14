@@ -46,7 +46,7 @@ start_here() {
        * for variable) or as a specific type.
        */
       var number = 5;
-      expect(_____, isNum);
+      expect(number, isNum);
     });
     group('Integers -', () {
       test('int', () {
