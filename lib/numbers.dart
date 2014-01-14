@@ -115,14 +115,14 @@ start_here() {
          * is actually holding a double.
          */
         var number = 5.3;
-        expect(_____, isDouble);
+        expect(number, isDouble);
       });
       test('not integer', () {
         /*
          * And remember that integers are not doubles.
          */
         var number = 5;
-        expect(_____, isNotDouble);
+        expect(number, isNotDouble);
       });
       test('supports exponents', () {
         /* 
